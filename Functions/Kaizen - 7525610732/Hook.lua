@@ -1,0 +1,1 @@
+local a={Checks={}}function a:Functions(b,...)a.Checks[b]=a.Checks[b]or{}for c,d in next,a.Checks[b]do local e=d(b,...)if e then return e end end end;if hookmetamethod and getnamecallmethod then local f;f=hookmetamethod(game,"__namecall",function(...)local g=a:Functions(getnamecallmethod(),...)if g then return g()end;return f(...)end)end;return a
